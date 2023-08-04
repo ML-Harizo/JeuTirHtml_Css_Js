@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+/* html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+} */
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.game_info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.container {
+    height: 400px;
+    width: 500px;
+    border: 1px solid var(--main-color);
+    cursor: crosshair;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--second-bg-color);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#target {
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    transition: .25s;
+    animation: animateTarget 10s infinite;
+}
+
+button {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: var(--second-bg-color);
+    border: 1px solid var(--main-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes animateTarget {
+    to {
+        transform: translateY(-200px) rotate(90deg);
+    }
+}
